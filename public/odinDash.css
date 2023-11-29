@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@500&display=swap');
+
+:root{
+    --itemsPadding: 20px;
+    --subPadding: 10px;
+    --darkest: #0c0a09;
+    --darker: #431407;
+    --mid: #c2410c;
+    --light: #fb923c;
+    --lighter: #fed7aa;
+    --lightest: #fff7ed;
+    font-size: large;
+}
+
+body{
+    display: grid;
+    grid-template-areas: 
+    "sidebar header header header"
+    "sidebar main main main"
+    "sidebar main main main"
+    "sidebar main main main";
+    font-family: 'Smooch Sans', system-ui, ui-rounded, 'Hiragino Maru Gothic ProN', Quicksand, Comfortaa, Manjari, 'Arial Rounded MT', 'Arial Rounded MT Bold', Calibri, source-sans-pro, sans-serif;
+    
+}
+
+
+.sidebar{
+    grid-area: sidebar;
+    background-color: var(--darkest);
+    padding: var(--itemsPadding);
+    color: var(--lightest);
+}
+
+header{
+    grid-area: header;
+    padding: var(--subPadding);
+
+}
+
+main{
+    grid-area: main;
+    display:grid;
+    grid-template-columns: 5fr 2fr;
+    padding: var(--itemsPadding);
+    gap: 10px;
+    background-color: var(--lighter);
+}
+
+.projects{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 10px;
+}
+
+.card{
+    border-radius: 15px;
+    border: 3px solid var(--mid);
+    padding: 0.75rem;
+}
+
+.bottomHeader{
+    display: flex;
+    padding: var(--subPadding);
+}
+
+.buttonsContainer{
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex: 1;
+}
+
+.upperHeader{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+form{
+    display:flex;
+    flex:1;
+    height: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    padding: var(--subPadding);
+}
+
+form>*{
+    padding: var(--subPadding);
+    height: 1.5rem;
+}
+
+input{
+    flex: 1;
+}
+
+.account{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.account>*{
+    padding:var(--subPadding);
+}
+
+img[src="public/images/bell-ring-outline.svg"]{
+    height: 1.5rem;
+}
+
+input[type="search"]{
+    border-radius: 100px;
+    background-color: var(--lighter);
+}
+
+.account img:nth-child(2){
+    height: 50px;
+    border-radius: 50%;
+}
+
+.profile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile>*{
+    padding: var(--subPadding);
+}
+
+.profile img{
+    height:80px;
+    border-radius: 50%;
+}
+
+
