@@ -42,7 +42,7 @@ main{
     display:grid;
     grid-template-columns: 5fr 2fr;
     padding: var(--itemsPadding);
-    gap: 10px;
+    gap: 20px;
     background-color: var(--lighter);
 }
 
@@ -60,14 +60,26 @@ main{
 
 .bottomHeader{
     display: flex;
-    padding: var(--subPadding);
+
 }
 
 .buttonsContainer{
     display:flex;
-    justify-content: space-evenly;
+    justify-content: right;
     align-items: center;
     flex: 1;
+}
+
+.buttonsContainer button{
+    border-radius: 15px;
+    background-color: var(--mid);
+    padding-left: var(--itemsPadding);
+    padding-right: var(--itemsPadding);
+    margin-right: var(--itemsPadding);
+}
+
+.buttonsContainer button:hover{
+    background-color: var(--light);
 }
 
 .upperHeader{
@@ -124,6 +136,8 @@ input[type="search"]{
     align-items: center;
 }
 
+
+
 .profile>*{
     padding: var(--subPadding);
 }
@@ -133,4 +147,33 @@ input[type="search"]{
     border-radius: 50%;
 }
 
+.announcements , .trends{
+    border: 3px solid var(--darker);
+    border-radius: 15px;
+    background-color: var(--mid);
+}
+
+
+.announcementsContainer , .trendingsContainer{
+    padding: 4px;
+}
+
+.announceCard , .trendCard{
+    padding-left: 4px;
+}
+
+.profile div p:nth-child(2){
+    font-size: larger;
+    font-weight: 600;
+}
+
+.sidebar ul{
+    list-style: none;
+    padding-left: 0;
+}
+
+.sidebar ul li img{ 
+    height: 10px;
+    filter: invert(85%) sepia(26%) saturate(7182%) hue-rotate(330deg) brightness(98%) contrast(100%);
+}
 
